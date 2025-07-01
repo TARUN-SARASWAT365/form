@@ -1,0 +1,155 @@
+/* src/pages/Contact.css */
+
+.contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff7f2;
+  min-height: 100vh;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.contact-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  padding: 35px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideUp 0.7s ease-out forwards;
+}
+
+.contact-title {
+  color: #5a2a82;
+  font-size: 26px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.contact-description {
+  color: #444;
+  font-size: 15px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #333;
+  margin-bottom: 18px;
+  font-size: 15px;
+  justify-content: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-item:hover {
+  color: #5a2a82;
+  transform: translateX(5px);
+}
+
+.contact-icon {
+  color: #5a2a82;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+  transform: scale(1.2);
+}
+
+.contact-button {
+  display: inline-block;
+  background-color: #5a2a82;
+  color: white;
+  text-decoration: none;
+  padding: 12px 26px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(90, 42, 130, 0.2);
+}
+
+.contact-button:hover {
+  background-color: #462166;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* Add below existing styles */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 30px;
+  animation: slideFade 0.6s ease-in-out forwards;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #5a2a82;
+  outline: none;
+  box-shadow: 0 0 5px rgba(90, 42, 130, 0.3);
+}
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.form-status {
+  margin-top: 10px;
+  font-size: 14px;
+  color: green;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.form-status.error {
+  color: red;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+ 
