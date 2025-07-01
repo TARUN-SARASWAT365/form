@@ -22,20 +22,36 @@ const Horoscope = () => {
   const [date, setDate] = useState("");
   const [loading, setLoading] = useState(false);
   const [language, setLanguage] = useState("hi"); // 'hi' or 'en'
+  const [error, setError] = useState("");
 
   const fetchHoroscope = async (sign) => {
     setLoading(true);
+    setError("");
     try {
-      const res = await fetch(`http://localhost:4000/horoscope?sign=${sign}&lang=${language}`);
+      const res = await fetch(
+        `https://astrobck.onrender.com/horoscope?sign=${sign}&lang=${language}`
+      );
+
+      if (!res.ok) {
+        throw new Error(`API failed with status ${res.status}`);
+      }
+
       const data = await res.json();
-      setHoroscope(data.description || "राशिफल उपलब्ध नहीं है।");
-      setDate(data.date || "");
-    } catch (error) {
-      console.error("Fetch error:", error);
-      setHoroscope("राशिफल लोड करने में समस्या आई है।");
+
+      if (!data.description) {
+        throw new Error("No description received.");
+      }
+
+      setHoroscope(data.description);
+      setDate(data.hindiDate || data.date || "");
+    } catch (err) {
+      console.error("Fetch error:", err);
+      setError("राशिफल लोड करने में समस्या आई है। कृपया बाद में प्रयास करें।");
+      setHoroscope("");
       setDate("");
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   useEffect(() => {
@@ -71,6 +87,8 @@ const Horoscope = () => {
 
       {loading ? (
         <p className="horoscope-loading">लोड हो रहा है...</p>
+      ) : error ? (
+        <p className="horoscope-error">{error}</p>
       ) : (
         <>
           {date && <p className="horoscope-date">📅 तारीख: {date}</p>}
