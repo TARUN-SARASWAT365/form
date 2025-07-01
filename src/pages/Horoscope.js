@@ -16,12 +16,15 @@ const zodiacSigns = [
   { name: "मीन", value: "pisces" },
 ];
 
+// ✅ CRA .env variable
+const BASE_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:4000";
+
 const Horoscope = () => {
   const [selectedSign, setSelectedSign] = useState("aries");
   const [horoscope, setHoroscope] = useState("");
   const [date, setDate] = useState("");
   const [loading, setLoading] = useState(false);
-  const [language, setLanguage] = useState("hi"); // 'hi' or 'en'
+  const [language, setLanguage] = useState("hi");
   const [error, setError] = useState("");
 
   const fetchHoroscope = async (sign) => {
@@ -29,7 +32,7 @@ const Horoscope = () => {
     setError("");
     try {
       const res = await fetch(
-        `https://astrobck.onrender.com/horoscope?sign=${sign}&lang=${language}`
+        `${BASE_URL}/horoscope?sign=${sign}&lang=${language}`
       );
 
       if (!res.ok) {
@@ -62,7 +65,6 @@ const Horoscope = () => {
     <div className="horoscope-container">
       <h2 className="horoscope-title">🔮 आज का राशिफल</h2>
 
-      {/* Language Toggle */}
       <div className="lang-toggle">
         <button onClick={() => setLanguage("hi")} disabled={language === "hi"}>
           हिंदी
@@ -72,7 +74,6 @@ const Horoscope = () => {
         </button>
       </div>
 
-      {/* Zodiac Dropdown */}
       <select
         className="horoscope-select"
         value={selectedSign}
