@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "client": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "client": "react-scripts start"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
