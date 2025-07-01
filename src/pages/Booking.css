@@ -1,0 +1,143 @@
+.booking-section {
+  background-color: #fff9f5;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.booking-container {
+  background: #fff;
+  padding: 3rem 2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.booking-title {
+  font-size: 2rem;
+  color: #5e239d;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.booking-subtext {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.whatsapp-button {
+  display: inline-block;
+  background-color: #25d366;
+  color: white;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+.whatsapp-button:hover {
+  background-color: #1da851;
+}
+.booking-advanced {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #fcf6f1, #fff);
+  padding: 2rem;
+}
+
+.booking-card {
+  background: #fff;
+  padding: 3rem 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.booking-icon {
+  color: #5e239d;
+  margin-bottom: 1rem;
+  animation: bounce 2s infinite;
+}
+
+.booking-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #5e239d;
+  margin-bottom: 1rem;
+}
+
+.booking-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.booking-options a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  margin: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-icon {
+  margin-right: 0.5rem;
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: white;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1da851;
+  transform: scale(1.05);
+}
+
+.btn-email {
+  background-color: #5e239d;
+  color: white;
+}
+
+.btn-email:hover {
+  background-color: #441a75;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}

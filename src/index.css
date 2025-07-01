@@ -1,0 +1,35 @@
+/* Tailwind Directives - Required */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Your custom styles below */
+
+body {
+  @apply bg-gray-50 text-gray-900;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input, select, button {
+  @apply border border-gray-300 rounded px-3 py-2 my-2 w-full;
+}
+
+button {
+  @apply bg-blue-600 text-white font-medium hover:bg-blue-700 transition duration-200;
+}
+
+h2, h3 {
+  @apply text-xl font-semibold my-4;
+}
+
+ul {
+  @apply list-disc ml-6 mb-4;
+}
+
+label {
+  @apply block font-medium mb-1;
+}
+
+div {
+  @apply mb-4;
+}

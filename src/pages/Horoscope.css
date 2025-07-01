@@ -1,0 +1,64 @@
+/* src/pages/Horoscope.css */
+.horoscope-container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  background-color: #fdf6ee;
+}
+
+.horoscope-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #4b0082;
+}
+
+.horoscope-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.horoscope-loading {
+  color: #888;
+  font-style: italic;
+}
+
+.horoscope-text {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+}
+.lang-toggle {
+  margin: 1rem 0;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.lang-toggle button {
+  padding: 0.5rem 1rem;
+  background-color: #6200ee;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.lang-toggle button:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+}
+
+.horoscope-date {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
