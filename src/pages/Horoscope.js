@@ -16,7 +16,7 @@ const zodiacSigns = [
   { name: "मीन", value: "pisces" },
 ];
 
-// ✅ CRA .env variable
+// ✅ Use environment variable (set in .env or Vercel)
 const BASE_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:4000";
 
 const Horoscope = () => {
